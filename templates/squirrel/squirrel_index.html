@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load my_templatetags %}
+
+{% block title %}
+博客首页
+{% endblock %}
+{% block extend_css %}
+ <link rel="stylesheet" href="{% static 'squirrel/css/squirrel_index.css' %}">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    {# 这个是jquery的，要先写，下面那个是bootstrap的。bootstrap依赖于jquery #}
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.1/jquery.js"></script>
+
+    <script type='text/javascript' src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="{% static 'squirrel/js/squirrel_index.js' %}"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+{% endblock %}
+
+
+{% block content %}
+
+
+<div id="page" class="hfeed site">
+    <div class="jumbotron">
+        <div class="container">
+            <h1>未鸑</h1>
+            <p>为树不为花</p>
+
+        </div>
+
+    </div>
+    <ul class="main">
+        <button id="create_article" class="btn btn-primary btn-lg">好记性不如烂笔头</button>
+        <button id="article_index" class="btn btn-primary btn-lg">写了也不记得</button>
+        <button id="squirrel_article" class="btn btn-primary btn-lg" >收藏的就是我会的</button>
+        <li class="main_artical">
+
+            {% for article in squirrel_list %}
+                <article class="everypiece" article_id="{{ article.id }}">
+
+                    <h2 class="title" article_id="{{ article.id }}"> {{ article.title }}</h2>
+                        <div class="createtime">{{ article.spider_time }}</div>
+                        <span class="content">{{ article.content|safe }}</span>
+                    {{ article.id }}
+
+
+
+                </article>
+
+                {#    <li>{{ article.title }}</li>#}
+            {% endfor %}
+        </li>
+
+        {% paginator page_obj %}
+    </ul>
+
+
+</div>
+{% endblock %}

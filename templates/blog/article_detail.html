@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ article.title }}
+{% endblock %}
+
+{% block extend_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/article_detail.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="main">
+        <div class="main_artical">
+            <h2>{{ article.title }}</h2>
+            <span id="time">{{ article.create_time }}</span>
+            <div class="content">{{ article.content|safe }}</div>
+
+
+
+        </div>
+
+    <a href="{% url 'blog:index' %}">回到首页</a>
+    </div>
+
+
+
+{% endblock %}
+

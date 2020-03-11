@@ -1,0 +1,72 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+
+
+.jumbotron {
+    background: url(../images/title_background2.png) no-repeat;
+    height: 300px;
+    background-size: cover;
+
+
+
+}
+
+.main {
+    background-color: #eee;
+    margin-top: -30px;
+    box-sizing: border-box;
+}
+
+.main_artical {
+    background-color: rgba(223, 223, 223, 0.97);
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+
+.everypiece {
+    background-color: rgb(255, 253, 253);
+    border-radius: 10px;
+}
+
+.title {
+    color: cornflowerblue;
+    margin-left: 2rem;
+    border-bottom: dot-dot-dash;
+    border-bottom-width: 0.3rem;
+}
+
+.createtime {
+    font-size: 0.88rem;
+    float: right;
+    width: 10rem;
+
+}
+
+.content {
+    color: #001162;
+}
+
+.content p,pre {
+    margin-left: 1rem;
+    background-color: rgb(255, 253, 253)!important;
+    border: none!important;
+}

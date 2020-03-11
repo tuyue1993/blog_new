@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ article.title }}
+{% endblock %}
+
+{% block extend_css %}
+    <link rel="stylesheet" href="{% static 'squirrel/css/squirrel_detail.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="main">
+        <div class="main_artical">
+            <h2>{{ squirrel_detail.title }}</h2>
+            <span id="time">{{ squirrel_detail.spider_time }}</span>
+            <div class="content">{{ squirrel_detail.content|safe }}</div>
+
+
+
+        </div>
+
+    <a href="{% url 'blog:index' %}">回到首页</a>
+    </div>
+
+
+
+{% endblock %}
+
